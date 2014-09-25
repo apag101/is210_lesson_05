@@ -4,7 +4,7 @@
 Task 01."""
 
 
-def bool_to_str(bvalue, short == False):
+def bool_to_str(bvalue, short = False):
     """Returns a boolean as a string.
 
     Args:
