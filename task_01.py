@@ -25,10 +25,11 @@ def bool_to_str(bvalue, short = False):
 
     """
     if bvalue == True and short == True:
-        return 'Y'
+        r = 'Y'
     elif bvalue == True and short == False:
-        return 'Yes'
+        r = 'Yes'
     elif bvalue == False and short == True:
-        return 'N'
+        r = 'N'
     else:
-        return 'No'
+        r = 'No'
+    return r
