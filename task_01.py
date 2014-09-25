@@ -8,11 +8,8 @@ def bool_to_str(bvalue, short = False):
     """Returns a boolean as a string.
 
     Args:
-        bool_to_string(bvalue): Boolean value of True or False.
-		bool_to_string(short): Short value of Y or N, for bvalue.
-
-	Defaults:
-		bool_to_string(short): Default value of false.
+        bvalue(boolean, optional).
+	short(bolean, Default : False).
 
     Returns:
         string: Returns a string value of Yes/No/Y/N
