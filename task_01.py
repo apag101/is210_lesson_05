@@ -3,6 +3,8 @@
 """Lesson 5
 Task 01."""
 def bool_to_str(bvalue, short=False):
+
+
     """Returns a boolean as a string.
 
 Args:
@@ -19,12 +21,13 @@ Examples:
     'Y'
 
 """
+    ret = ""
     if bvalue and short:
-        rt = 'Y'
+        ret = "Y"
     elif bvalue and short is False:
-        rt = 'Yes'
+        ret = "Yes"
     elif bvalue is False and short:
-        rt = 'N'
+        ret = "N"
     else:
-        rt = 'No'
-    return rt
+        ret = "No"
+    return ret
