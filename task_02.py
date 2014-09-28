@@ -2,22 +2,25 @@
 # -*- coding: utf-8 -*-
 """Provides loan management features."""
 
+
 import decimal
 
 def get_interest_rate(principal, duration, prequalification):
 
     """Returns interest rate or None if none exists.
-Args:
+
+    Args:
     principal(numeric).
     duration(numberic).
     prequalification(boolean).
-Returns:
+
+    Returns:
     Decimal: Returns a decimal interest
 
-Examples:
+    Examples:
     >>> task_02.get_interest_rate(1000000, 15, True)
     '0.0205'
-"""
+    """
     rate = None
     if principal >= 0 and principal <= 199999:
         if duration >= 1 and duration <= 15:
@@ -67,18 +70,21 @@ Examples:
 def compound_interest(principal, duration, rate, interval = 12):
 
     """Returns interest and principal combined.
-Args:
+
+    Args:
     principal(numeric).
     duration(numberic).
     rate(Decimal)
     interval(numeric, Default: 12)
-Returns:
+
+    Returns:
     Integer: Returns an integer interest and principal combined.
 
-Examples:
+
+    Examples:
     >>> task_02.compound_interest(1000000, 15, True)
     Decimal('1807919656619.745219860645100')
-"""
+    """
     if rate is not None:
         rate = decimal.Decimal(rate)
         compound = principal * ((1 + rate / interval) ** (interval * duration))
@@ -89,17 +95,20 @@ Examples:
 def calculate_total(principal, duration, prequalification):
 
     """Returns the total, rounded to the nearest integer.
-Args:
+
+    Args:
     principal(numeric).
     duration(numberic).
     prequalification(boolean).
-Returns:
+
+    Returns:
     Integer: Returns total to the nearest integer.
 
-Examples:
+
+    Examples:
     >>> task_02.calculate_total(100000, 15, True)
     172233
-"""
+    """
     rate = get_interest_rate(principal, duration, prequalification)
     total = int(compound_interest(principal, duration, rate, interval = 12))
     return total
@@ -107,17 +116,19 @@ Examples:
 def calculate_interest(principal, duration, prequalification):
 
     """Returns the total interest.
-Args:
+
+    Args:
     principal(numeric).
     duration(numberic).
     prequalification(boolean).
-Returns:
+
+    Returns:
     Integer: Returns total interest.
 
-Examples:
+    Examples:
     >>> task_02.calculate_interest(100000, 15, True)
     72233
-"""
+    """
     rate = get_interest_rate(principal, duration, prequalification)
     total = int(calculate_total(principal, duration, prequalification))
     interest = total - principal

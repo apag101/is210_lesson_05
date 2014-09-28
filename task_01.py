@@ -1,26 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Lesson 5
-Task 01."""
-def bool_to_str(bvalue, short=False):
+"""Lesson 5 Task 01."""
 
+
+def bool_to_str(bvalue, short=False):
 
     """Returns a boolean as a string.
 
-Args:
+    Args:
     bvalue(boolean, optional).
     short(bolean, Default : False).
 
-Returns:
+    Returns:
     string: Returns a string value of Yes/No/Y/N
 
-Examples:
+    Examples:
     >>> task_01.bool_to_str(False)
     'No'
     >>> task_01.bool_to_str(True, short=True)
     'Y'
-
-"""
+    """
     ret = ""
     if bvalue and short:
         ret = "Y"
