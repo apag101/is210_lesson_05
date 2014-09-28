@@ -9,6 +9,7 @@ import decimal
 #total = None
 
 def get_interest_rate(principal, duration, prequalification):
+    rate = 0
     if principal >= 0 and principal <= 199999:
         if duration >= 1 and duration <= 15:
             if prequalification:
@@ -46,6 +47,7 @@ def get_interest_rate(principal, duration, prequalification):
         elif duration >= 16 and duration <= 20:
             if prequalification:
                 rate = '0.0262'
+    else: rate = None
     rate = decimal.Decimal(rate)
     return rate
 
@@ -54,9 +56,9 @@ def compound_interest(principal, duration, rate, interval = 12):
         rate = decimal.Decimal(rate)
         compound = principal * ((1 + rate / interval) ** (interval * duration))
     else: compound = None
-    return decimal.Decimal(compound)
+    compound = decimal.Decimal(compound)
+    return compound
 
 def calculate_total(principal, duration, prequalification):
-    rate = None
-    get_interest_rate(principal, duration, prequalification)                                                                                                                                                                                                                                                                                                                                                                                                                            
-    return  rate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    rate = get_interest_rate(principal, duration, prequalification)
+    return rate
