@@ -4,7 +4,7 @@
 
 
 def celsius_to_fahrenheit(temperature):
-    
+
     """Converts Celsius temperature to Fahrenheit.
 
     Args:
@@ -37,9 +37,9 @@ def fahrenheit_to_celsius(temperature):
     C = 5 * (float(temperature) - 32) / 9
     return float(C)
 
-def convert_temperature(temperature, output_format = 'c'):
+def convert_temperature(temperature, output_format='c'):
 
-      """Detects temperature and output specific type.
+    """Detects temperature and output specific type.
 
     Args:
     temperature(string).

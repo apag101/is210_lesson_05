@@ -67,7 +67,7 @@ def get_interest_rate(principal, duration, prequalification):
             rate = None
     return rate
 
-def compound_interest(principal, duration, rate, interval = 12):
+def compound_interest(principal, duration, rate, interval=12):
 
     """Returns interest and principal combined.
 
@@ -110,7 +110,7 @@ def calculate_total(principal, duration, prequalification):
     172233
     """
     rate = get_interest_rate(principal, duration, prequalification)
-    total = int(compound_interest(principal, duration, rate, interval = 12))
+    total = int(compound_interest(principal, duration, rate, interval=12))
     return total
 
 def calculate_interest(principal, duration, prequalification):
@@ -129,7 +129,6 @@ def calculate_interest(principal, duration, prequalification):
     >>> task_02.calculate_interest(100000, 15, True)
     72233
     """
-    rate = get_interest_rate(principal, duration, prequalification)
     total = int(calculate_total(principal, duration, prequalification))
     interest = total - principal
     return interest
